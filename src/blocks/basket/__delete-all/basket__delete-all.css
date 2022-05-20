@@ -1,0 +1,15 @@
+.basket__delete-all {
+  margin-bottom: 10px;
+  width: 90px;
+  font-size: 15px;
+  background-color: aliceblue;
+  border: 1px solid rgb(255, 84, 84);
+  border-radius: 3px;
+  padding: 5px;
+  cursor: pointer;
+  transition: 500ms ease;
+}
+
+.basket__delete-all:hover{
+  transform: scale(1.05);
+}

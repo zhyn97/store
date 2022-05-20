@@ -1,0 +1,33 @@
+.header__presentation {
+  background-image: url("/src/img/bg.jpeg");
+  margin: 50px 0;
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: color;
+  background-color: rgba(91, 89, 89, 0.312);
+  position: relative;
+}
+
+.header__presentation::after {
+  content: "The best products for your home";
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  width: 300px;
+  font-weight: 600;
+  font-size: 40px;
+  color: #fff;
+}
+
+.header__presentation::before {
+  content: "Best for you ";
+  position: absolute;
+  top: 250px;
+  left: 50px;
+  width: 300px;
+  font-weight: 300;
+  font-size: 20px;
+  color: #fff;
+}

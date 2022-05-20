@@ -1,0 +1,10 @@
+.product__img {
+  width: 100%;
+  height: 500px;
+  cursor: pointer;
+  transition: 500ms ease;
+}
+
+.product__img:hover {
+  transform: scale(1.05);
+}

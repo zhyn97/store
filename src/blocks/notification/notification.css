@@ -1,0 +1,10 @@
+.notification{
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 50px;
+    background-color: #6bdd6b;
+    border-radius: 5px;
+    padding: 10px;
+    color: black;
+}
