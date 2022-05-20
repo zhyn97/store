@@ -1,0 +1,16 @@
+.header__menu {
+  float: right;
+  list-style: none;
+  margin: 0;
+}
+
+.header__menu li {
+  display: inline;
+  cursor: pointer;
+  margin: 25px;
+  transition: opacity 500ms ease;
+}
+
+.header__menu li:hover {
+  opacity: 0.5;
+}

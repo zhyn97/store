@@ -1,13 +1,56 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url(/src/vendor/normalize.css);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+@import url(/src/blocks/body/body.css);
+@import url(/src/blocks/root/root.css);
+
+@import url(/src/blocks/header/header.css);
+@import url(/src/blocks/header/__logo/header__logo.css);
+@import url(/src/blocks/header/__menu/header__menu.css);
+@import url(/src/blocks/header/__presentation/header__presentation.css);
+@import url(/src/blocks/header/__button/header__button.css);
+@import url(/src/blocks/header/__button/_numb/header__button_numb.css);
+@import url(/src/blocks/basket/basket.css);
+@import url(/src/blocks/basket/__container/basket__container.css);
+@import url(/src/blocks/basket/_active/basket_active.css);
+@import url(/src/blocks/basket/__text/basket__text.css);
+@import url(/src/blocks/basket/__title/basket__title.css);
+@import url(/src/blocks/basket/__total-price/basket__total-price.css);
+@import url(/src/blocks/basket/__delete-all/basket__delete-all.css);
+
+@import url(/src/blocks/order/order.css);
+@import url(/src/blocks/order/__img/order__img.css);
+@import url(/src/blocks/order/__price/order__price.css);
+@import url(/src/blocks/order/__title/order__title.css);
+@import url(/src/blocks/order/__deleteButton/order__deleteButton.css);
+
+@import url(/src/blocks/features/features.css);
+@import url(/src/blocks/features/__collection/features__collection.css);
+@import url(/src/blocks/features/__item/features__item.css);
+@import url(/src/blocks/features/__text/features__text.css);
+@import url(/src/blocks/features/__title/features__title.css);
+@import url(/src/blocks/features/__img/features__img.css);
+@import url(/src/blocks/features/__description/features__description.css);
+@import url(/src/blocks/features/__item-title/features__item-title.css);
+
+@import url(/src/blocks/main/main.css);
+
+@import url(/src/blocks/categories/categories.css);
+@import url(/src/blocks/categories/__item/categories__item.css);
+
+@import url(/src/blocks/product/product.css);
+@import url(/src/blocks/product/__description/product__description.css);
+@import url(/src/blocks/product/__img/product__img.css);
+@import url(/src/blocks/product/__price/product__price.css);
+@import url(/src/blocks/product/__title/product__title.css);
+@import url(/src/blocks/product/__button/product__button.css);
+
+@import url(/src/blocks/big-img/big-img.css);
+@import url(/src/blocks/big-img/__container/big-img__container.css);
+@import url(/src/blocks/big-img/__description/big-img__description.css);
+@import url(/src/blocks/big-img/__img/big-img__img.css);
+@import url(/src/blocks/big-img/__title.css/big-img__title.css);
+
+@import url(/src/blocks/notification/notification.css);
+
+@import url(/src/blocks/footer/footer.css);

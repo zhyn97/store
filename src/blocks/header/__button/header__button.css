@@ -1,0 +1,7 @@
+.header__button{
+  transition: 500ms ease;
+}
+
+.header__button:hover{
+  transform: scale(1.5);
+}

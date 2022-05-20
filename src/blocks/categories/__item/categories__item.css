@@ -1,0 +1,15 @@
+.categories__item {
+  margin-right: 10px;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  background-color: #dadada;
+  min-width: 70px;
+  text-align: center;
+  padding: 5px;
+  cursor: pointer;
+  transition: 500ms ease;
+}
+
+.categories__item:hover{
+  transform: scale(1.05);
+}

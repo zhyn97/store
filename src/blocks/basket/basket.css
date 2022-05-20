@@ -1,0 +1,18 @@
+.basket {
+  background-color: aliceblue;
+  min-width: 340px;
+  max-height: 400px;
+  visibility: hidden;
+  position: absolute;
+  right: 10px;
+  top: 40px;
+  z-index: 100;
+  -webkit-box-shadow: -27px -21px 43px -20px rgba(66, 68, 90, 1);
+  -moz-box-shadow: -27px -21px 43px -20px rgba(66, 68, 90, 1);
+  box-shadow: -27px -21px 43px -20px rgba(66, 68, 90, 1);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  padding-bottom: 0;
+  overflow: scroll;
+}
