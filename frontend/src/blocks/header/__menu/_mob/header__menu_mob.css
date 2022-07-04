@@ -1,0 +1,34 @@
+.header__menu_mob {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.header__menu_mob ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.header__menu_mob li {
+  margin: 5px 0 5px;
+  background-color: #b7b4b0;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: 500ms ease;
+}
+
+.header__menu_mob a{
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+.header__menu_mob li:hover{
+  transform: scale(1.02);
+}

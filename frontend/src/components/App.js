@@ -4,13 +4,17 @@
 /* eslint-disable eqeqeq */
 import React from "react";
 import Header from "./Header";
-import Features from "./Features";
 import Footer from "./Footer";
-import Products from "./Products";
-import items from "../vendor/dataBase";
-import Categories from "./Categories";
 import PopupBigImg from "./PopupBigImg";
 import Notification from "./Notification";
+import Main from "./Main";
+import About from "./About";
+import Contact from "./Contact";
+import Cabinet from "./Cabinet";
+import NotFound from "./NotFound";
+import { Routes, Route } from "react-router-dom";
+import api from "../utils/api";
+import Login from "./Login";
 
 function App() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -37,10 +41,13 @@ function App() {
       name: "Light",
     },
   ]);
-  const [currentItems, setCurrentItems] = React.useState([...items]);
+  const [isChoose, setIsChoose] = React.useState("all");
   let [onBigImg, setOnBigImg] = React.useState(false);
   const [bigImg, setBigImg] = React.useState({});
   const [notification, setNotification] = React.useState(false);
+  const [products, setProducts] = React.useState([]);
+  const [currentItems, setCurrentItems] = React.useState([]);
+
 
   // function-----------------------------------
 
@@ -79,20 +86,41 @@ function App() {
 
   function chooseCategory(category) {
     if (category.key === "all") {
-      setCurrentItems([...items]);
+      setCurrentItems([...products]);
       return;
     }
 
-    setCurrentItems(items.filter((el) => el.category === category.key));
+    setCurrentItems(products.filter((el) => el.category === category.key));
   }
 
-  function onNotification(){
+  function onNotification() {
     setNotification(true);
 
     const timer = setTimeout(() => {
       setNotification(false);
     }, 2000);
     return () => clearTimeout(timer);
+  }
+
+  function choose(el) {
+    setIsChoose(el.key);
+  }
+
+  function getProducts() {
+    api.getProducts()
+    .then((res) => {
+      setProducts(res);
+      setCurrentItems(res);
+    })
+    .then(console.log(products))
+    .catch(err => console.log(err))
+  }
+
+  function addProducts(title, img, desc, category, price) {
+
+    api.addProdustc(title, img, desc, category, price)
+    .then(res => console.log(res))
+    .catch(err => console.log(err))
   }
 
   // hooks usage--------------------------------
@@ -129,6 +157,10 @@ function App() {
     };
   }, []);
 
+  React.useEffect(() => {
+    getProducts();
+  }, [])
+
   // render--------------------------------------
 
   return (
@@ -140,9 +172,28 @@ function App() {
         onDelete={deleteOrder}
         onDeleteAll={deleteAllProducts}
       />
-      <Features />
-      <Categories categories={categories} onCategory={chooseCategory} />
-      <Products items={currentItems} onAdd={addToOrder} onBigImg={openBigImg} onNotification={onNotification}/>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Main
+              categories={categories}
+              onCategory={chooseCategory}
+              choose={choose}
+              isChoose={isChoose}
+              onAdd={addToOrder}
+              onBigImg={openBigImg}
+              onNotification={onNotification}
+              products={currentItems}
+            />
+          }
+        />
+        <Route path="/about" element={<About />} />
+        <Route path="/contacts" element={<Contact />} />
+        <Route path="/cabinet" element={<Cabinet addProducts={addProducts} />} />
+        <Route path="/admin_login" element={<Login />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
 
       {onBigImg && <PopupBigImg item={bigImg} onBigImg={openBigImg} />}
       {notification && <Notification />}

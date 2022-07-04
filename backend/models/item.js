@@ -5,10 +5,22 @@ const itemSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  img: String,
-  desc: String,
-  category: String,
-  price: String,
+  img: {
+    type: String,
+    required: true,
+  },
+  desc: {
+    type: String,
+    required: true,
+  },
+  category: {
+    type: String,
+    required: true,
+  },
+  price: {
+    type: String,
+    required: true,
+  },
 });
 
 module.exports = mongoose.model("item", itemSchema);

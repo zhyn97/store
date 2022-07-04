@@ -1,0 +1,19 @@
+.header__mobile-button {
+    float: right;
+    width: 30px;
+    height: 30px;
+    margin-top: -5px;
+    cursor: pointer;
+    transition: 500ms ease;
+  }
+  
+  .header__mobile-button:hover {
+    transform: scale(1.25);
+  }
+  
+  @media screen and (min-width: 701px) {
+    .header__mobile-button {
+      display: none;
+    }
+  }
+  

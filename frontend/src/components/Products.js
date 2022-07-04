@@ -2,11 +2,12 @@
 import React from "react";
 import Product from "./Product";
 
-export default function Products({ items, onAdd, onBigImg, onNotification }) {
+export default function Products({ onAdd, onBigImg, onNotification, products}) {
+
   return (
     <main className="main">
-      {items.map((el) => {
-        return <Product key={el.id} item={el} onAdd={onAdd} onBigImg={onBigImg} onNotification={onNotification} />;
+      {products.map((el) => {
+        return <Product key={el._id} item={el} onAdd={onAdd} onBigImg={onBigImg} onNotification={onNotification} />;
       })}
     </main>
   );
