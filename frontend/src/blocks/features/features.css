@@ -1,0 +1,10 @@
+.features {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 1000px) {
+  .features {
+    align-items: center;
+  }
+}

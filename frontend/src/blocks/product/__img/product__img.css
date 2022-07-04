@@ -1,0 +1,9 @@
+.product__img {
+  width: 100%;
+  cursor: pointer;
+  transition: 500ms ease;
+}
+
+.product__img:hover {
+  transform: scale(1.05);
+}
